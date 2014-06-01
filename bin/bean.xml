@@ -8,7 +8,7 @@
 
 	<bean id="world" class="org.hnm736.spring."
 
-	<!-- Add html/xml comments to bean.xml file -->
+	<!-- THIS CHANGES is for MASTER created -->	
 
 </beans> 
 
