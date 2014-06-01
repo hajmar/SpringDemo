@@ -6,10 +6,10 @@
 		<property name="message" value="Hello World" />
 	</bean>
 
-	<bean id="world" class="org.hnm736.spring."
+	<bean id="world" class="org.hnm736.spring."</bean>
+	
 
-
-
+	<bean id="world2" class="org.hnm736.spring.Second" />
 </beans> 
 
 
