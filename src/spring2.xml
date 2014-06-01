@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+
+<beans>
+	<bean id="triangle" class="org.maro.javabrains.Triangle" name="triangle-name">
+		<property name="A" ref="pointA"></property>
+		<property name="B">
+			<bean id="pointB" class="org.maro.javabrains.Point">
+				<property name="x" value="-20"></property>
+				<property name="y" value="0" />
+			</bean>
+		</property>
+		<property name="C" ref="pointC"></property>
+	</bean>
+
+	<bean id="pointA" class="org.maro.javabrains.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0" />
+	</bean>
+
+
+
+	<bean id="pointC" class="org.maro.javabrains.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0" />
+	</bean>
+
+	<alias name="triangle" alias="triangle-alias" />
+
+
+</beans>

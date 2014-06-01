@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle" class="org.hnm736.javabrains.Triangle"
+		autowire="byName">
+	</bean>
+
+	<bean id="pointA" class="org.hnm736.javabrains.Point">
+		<property name="pointX" value="100"></property>
+		<property name="pointY" value="200" />
+	</bean>
+
+	<bean id="pointB" class="org.hnm736.javabrains.Point">
+		<property name="pointX" value="300"></property>
+		<property name="pointY" value="400" />
+	</bean>
+	<!-- <alias name="pointB" alias="pointA" /> -->
+</beans>

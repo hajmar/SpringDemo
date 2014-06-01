@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+
+<beans>
+	<bean id="v1" class="org.maro.javabrains.Vehicle">
+		<property name="price" value="100">
+		</property>
+	</bean>
+
+	<bean id="v2" class="org.maro.javabrains.Vehicle">
+		<constructor-arg value="200" type="java.lang.String"
+			index="0"></constructor-arg>
+	</bean>
+
+	<bean id="wheel" class="org.maro.javabrains.Wheel" autowire="byName">
+		<constructor-arg value="100" type="int" index="0"></constructor-arg>
+	</bean>
+
+	<bean id="size2" class="org.maro.javabrains.Size">
+		<property name="length" value="12"></property>
+	</bean>
+
+	<alias name="size_2" alias="size" />
+
+	<bean id="size" class="org.maro.javabrains.Size">
+		<property name="width" value="21" />
+		<property name="length" value="33" />
+	</bean>
+
+
+</beans>

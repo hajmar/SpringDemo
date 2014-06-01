@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="parrentTriangle" class="org.hnm736.javabrains.Triangle">
+		<property name="pointA" ref="pointA" />
+	</bean>
+
+	<bean id="triangle1" class="org.hnm736.javabrains.Triangle"
+		parent="parrentTriangle">
+		<property name="pointB" ref="pointB"></property>
+	</bean>
+
+	<bean id="pointA" class="org.hnm736.javabrains.Point">
+		<property name="pointX" value="100"></property>
+		<property name="pointY" value="200" />
+	</bean>
+
+	<!-- <alias name="pointB" alias="pointA" /> -->
+
+	<bean id="parentSquare" class="org.hnm736.javabrains.Square">
+		<property name="pointB" ref="pointB" />
+	</bean>
+
+	<bean id="pointB" class="org.hnm736.javabrains.Point">
+		<property name="pointX" value="0123" />
+		<property name="pointY" value="0456" />
+	</bean>
+
+	<bean id="square" class="org.hnm736.javabrains.Square" parent="parentSquare">
+		<property name="pointB" ref="pointB" />
+	</bean>
+
+	<bean id="squareOrginal" class="org.hnm736.javabrains.Square"
+		autowire="byName">
+	</bean>
+
+	<bean id="rectangle" class="org.hnm736.javabrains.Rectangle"
+		parent="defaultRec">
+		<property name="points">
+			<list merge="true">
+				<ref bean="pointB" />
+				<ref bean="pointA" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="defaultRec" class="org.hnm736.javabrains.Rectangle">
+		<property name="points">
+			<list>
+				<ref bean="pointA" />
+			</list>
+		</property>
+	</bean>
+
+
+
+</beans>
