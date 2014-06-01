@@ -17,6 +17,9 @@ interface Ball	{
 	void action();
 }
 
+
+//comment something on master branch only
+
 interface Player	{
 	void kick(Ball ball);
 }
