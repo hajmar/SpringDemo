@@ -8,6 +8,8 @@
 
 	<bean id="world" class="org.hnm736.spring."</bean>
 	
+	<bean id ="word1" claass""/>
+	
 
 	<bean id="world2" class="org.hnm736.spring.Second" />
 </beans> 
